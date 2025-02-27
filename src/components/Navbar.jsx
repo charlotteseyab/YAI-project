@@ -6,9 +6,10 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className="fixed top-0 left-0 w-[70%] mx-auto bg-gradient-to-r from-red-600 to-yellow-400 text-black shadow-lg rounded-b-lg z-10"
-        style={{ margin: "35px" }}
-      >
+  className="fixed top-0 left-1/2 transform -translate-x-1/2 w-[70%] bg-gradient-to-r from-red-600 to-yellow-400 text-black shadow-lg rounded-b-lg z-10"
+  style={{ marginTop: "35px" }}
+>
+
         {/* Gradient Border Outset */}
         <div className="absolute inset-0 border-2 border-transparent rounded-lg">
           <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-red-600 rounded-lg"></div>
