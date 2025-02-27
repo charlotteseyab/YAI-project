@@ -3,7 +3,7 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 
 export const Contact = () => {
     return (
-      <div className="flex flex-col lg:flex-row bg-white min-h-screen p-10 lg:p-20">
+      <div id="contact" className="flex flex-col lg:flex-row bg-white min-h-screen p-10 lg:p-20">
   
         {/* Left Section - Contact Form */}
         <div className="w-full lg:w-2/3 p-6">
