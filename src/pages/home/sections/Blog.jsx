@@ -28,7 +28,7 @@ const Blog = () => {
     },
     {
       id: 3,
-      title: "Healthly Breakfast Tips",
+      title: "Healthy Breakfast Tips",
       excerpt: [
         " Prioritize Protein – Include eggs, beans, Greek yogurt, or nuts to keep you full longer.",
         " Avoid Sugar – Opt for whole grains, fruits, and vegetables.",

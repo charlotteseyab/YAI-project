@@ -11,7 +11,15 @@ const NextArrow = (props) => {
   return (
     <div
       className={`${className} slick-arrow`}
-      style={{ ...style, color: "black", right: "10px", zIndex: 1 }}
+      style={{
+        ...style,
+        color: "black",
+        right: "10px",
+        zIndex: 1,
+        // background: "white",
+        borderRadius: "50%",
+        padding: "1px",
+      }}
       onClick={onClick}
     >
       → {/* You can use an icon here if you prefer */}
@@ -24,7 +32,15 @@ const PrevArrow = (props) => {
   return (
     <div
       className={`${className} slick-arrow`}
-      style={{ ...style, color: "black", left: "10px", zIndex: 1 }}
+      style={{
+        ...style,
+        color: "black",
+        left: "10px",
+        zIndex: 1,
+        // background: "black",
+        borderRadius: "50%",
+        padding: "10px",
+      }}
       onClick={onClick}
     >
       ← {/* You can use an icon here if you prefer */}
@@ -67,25 +83,21 @@ export const Showcase = () => {
       id: 1,
       name: "TomBrown",
       image: img1, // Replace with actual image URL
-      // description: "Fun and tasty cereal for children.",
     },
     {
       id: 2,
       name: "Wheat Cereal",
       image: img1, // Replace with actual image URL
-      // description: "Energy-packed cereal for students.",
     },
     {
       id: 3,
       name: "Eko-egbeemi",
       image: img1, // Replace with actual image URL
-      // description: "Quick and healthy cereal for professionals.",
     },
     {
       id: 4,
       name: "Oblayo",
       image: img1, // Replace with actual image URL
-      // description: "Quick and healthy cereal for professionals.",
     },
   ];
 
@@ -98,14 +110,15 @@ export const Showcase = () => {
         <Slider {...settings}>
           {products.map((product) => (
             <div key={product.id} className="px-4">
-              <div className="relative bg-white rounded-lg shadow-lg text-center overflow-hidden">
+              <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-80 object-cover"
+                  className="w-full h-96 object-cover"
                 />
-                <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 p-4">
-                  <h3 className="text-xl font-bold text-yellow-400 mb-2">
+                {/* Overlay for Product Name and Buy Button */}
+                <div className="absolute inset-0 flex flex-col justify-end items-center bg-black bg-opacity-50 p-4">
+                  <h3 className="text-xl font-bold text-yellow-400 mb-2 font-serif">
                     {product.name}
                   </h3>
                   <Link
