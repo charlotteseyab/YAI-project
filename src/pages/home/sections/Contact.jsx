@@ -7,7 +7,7 @@ export const Contact = () => {
   
         {/* Left Section - Contact Form */}
         <div className="w-full lg:w-2/3 p-6">
-          <h2 className="text-4xl font-bold text-black">Contact <span className="text-red-500">Us</span></h2>
+          <h2 className="text-4xl font-bold text-black font-serif">Contact <span className="text-red-500 font-serif">Us</span></h2>
           <p className="text-gray-600 mt-2">Feel free to contact us any time. We will get back to you as soon as we can!</p>
   
           <form className="mt-6">
@@ -29,7 +29,7 @@ export const Contact = () => {
           <div className="absolute top-0 left-0 w-6 h-6 bg-yellow-400"></div>
           <div className="absolute bottom-0 right-0 w-6 h-6 bg-red-600"></div>
   
-          <h3 className="text-lg font-semibold mb-4">Info</h3>
+          <h3 className="text-lg font-semibold mb-4 font-serif">Info</h3>
           <div className="space-y-3 text-sm">
             <div className="flex items-center space-x-2">
               <FaEnvelope className="text-yellow-400 text-base" />

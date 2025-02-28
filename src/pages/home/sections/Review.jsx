@@ -39,7 +39,7 @@ export const Review = () => {
   return (
     <section className="py-12 bg-gray-100 text-center">
       <div id="review" className="container mx-auto px-6 max-w-2xl">
-        <h2 className="text-3xl font-bold text-gray-800">What Our Clients Say</h2>
+        <h2 className="text-3xl font-bold text-gray-800 font-serif">What Our Clients Say</h2>
         <div className="relative bg-white shadow-lg rounded-xl p-6 mt-6">
           <p className="text-gray-700 text-lg">"{reviews[currentIndex].review}"</p>
           <h3 className="mt-4 font-semibold text-gray-900">- {reviews[currentIndex].name}</h3>

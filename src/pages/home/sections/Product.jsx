@@ -5,7 +5,7 @@ export const Product = () => {
   return (
     <div id="products" className="bg-white py-8">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-red-600 mb-8">Our Products</h2>
+        <h2 className="text-3xl font-bold text-red-600 mb-8 font-serif">Our Products</h2>
         <p className="text-gray-700 text-lg">
           At Brown & Brown Foods, we produce a variety of healthy and nutritious
           breakfast cereals:

@@ -59,6 +59,12 @@ const Navbar = () => {
               Innovator
             </a>
             <a
+              href="#blog"
+              className="block py-2 md:inline hover:text-yellow-400"
+            >
+              Blog
+            </a>
+            <a
               href="#review"
               className="block py-2 md:inline hover:text-yellow-400"
             >
