@@ -1,5 +1,5 @@
 import React from "react";
-import Inno from "../../../assets/images/ai inno.jpg";
+import Inno from "../../../assets/images/inno.jpg";
 
 export const Innovator = () => {
   return (
@@ -24,6 +24,16 @@ export const Innovator = () => {
             <hr className=" border-t-1 border-yellow-400 my-1 " />
             <hr className=" border-t-1 border-red-600 my-1 " />
           </h2>
+          <h3>
+            <span className="text-3xl font-bold text-red-600 font-serif">
+              {" "}
+              Afua Ohenewaa{" "}
+            </span>
+            <span className="text-3xl font-bold text-yellow-400 font-serif">
+              {" "}
+              Asubonteng{" "}
+            </span>
+          </h3>
           <p className="text-gray-700 text-lg mb-4 leading-relaxed">
             A passionate female entrepreneur from Oforikrom, Ashanti Region,
             dedicated to solving the problem of skipped breakfasts. Her mission

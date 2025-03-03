@@ -1,3 +1,18 @@
 * {
   scroll-behavior: smooth;
 }
+
+#how-it-works {
+  background-color: #f7fafc;
+  /* Light gray background */
+}
+
+#how-it-works h2 {
+  color: #c53030;
+  /* Dark red for headings */
+}
+
+#how-it-works p {
+  color: #4a5568;
+  /* Dark gray for text */
+}

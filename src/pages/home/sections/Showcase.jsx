@@ -4,6 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import img1 from "../../../assets/images/bbbbbbbb.jpg";
+import img2 from "../../../assets/images/tombrown.jpg";
+import img3 from "../../../assets/images/eko.webp";
+import img4 from "../../../assets/images/oblayo.webp";
 
 // Custom Arrow Components
 const NextArrow = (props) => {
@@ -82,7 +85,7 @@ export const Showcase = () => {
     {
       id: 1,
       name: "TomBrown",
-      image: img1, // Replace with actual image URL
+      image: img2, // Replace with actual image URL
     },
     {
       id: 2,
@@ -92,12 +95,12 @@ export const Showcase = () => {
     {
       id: 3,
       name: "Eko-egbeemi",
-      image: img1, // Replace with actual image URL
+      image: img3, // Replace with actual image URL
     },
     {
       id: 4,
       name: "Oblayo",
-      image: img1, // Replace with actual image URL
+      image: img4, // Replace with actual image URL
     },
   ];
 

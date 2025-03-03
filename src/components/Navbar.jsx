@@ -46,6 +46,12 @@ const Navbar = () => {
             >
               Products
             </a>
+            {/* <a
+              href="#products"
+              className="block py-2 md:inline hover:text-yellow-400"
+            >
+              How it works
+            </a> */}
             <a
               href="#showcase"
               className="block py-2 md:inline hover:text-yellow-400"

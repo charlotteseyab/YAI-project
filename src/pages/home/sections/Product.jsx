@@ -55,6 +55,7 @@ export const Product = () => {
         <div className="w-full h-1 bg-red-600 mt-4"></div>
       </div>
     </div>
+    
   );
 };
 
