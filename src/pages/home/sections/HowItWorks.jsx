@@ -1,14 +1,24 @@
 import React from "react";
 import { FaShoppingCart, FaTruck, FaUtensils, FaSearch } from "react-icons/fa"; // Import icons
+import backgroundImage from "../../../assets/images/your-background-image.jpg"; // Replace with your background image path
 
 const HowItWorks = () => {
   return (
-    <div id="products" className="bg-gray-100 py-20 px-4 md:px-10">
+    <div
+      id="how-it-works"
+      className="relative py-20 px-4 md:px-10"
+      style={{
+        backgroundImage: `url(${backgroundImage})`, // Set the background image
+        backgroundSize: "cover", // Cover the entire section
+        backgroundPosition: "center", // Center the image
+        backgroundAttachment: "fixed", // Fixed background
+      }}
+    >
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-red-600 mb-8 text-center">
+        <h2 className="text-3xl font-bold text-white mb-8 text-center">
           How It Works
         </h2>
-        <p className="text-lg text-gray-700 mb-6 text-center">
+        <p className="text-lg text-white mb-6 text-center">
           A simple and easy way to enjoy our delicious breakfast cereals!
         </p>
 

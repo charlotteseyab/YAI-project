@@ -1,26 +1,30 @@
-import React from 'react'
-
-import { useState } from "react";
+import React, { useState } from "react";
+import { FaStar } from "react-icons/fa"; // Import star icon
+import backgroundImage from "../../../assets/images/bbbbbbbb.jpg"; // Replace with your background image path
 
 const reviews = [
   {
     name: "Emily Johnson",
-    review: "Amazing experience! The team was incredibly professional and delivered beyond expectations.",
+    review:
+      "Amazing experience! The team was incredibly professional and delivered beyond expectations.",
     rating: 5,
   },
   {
     name: "Michael Smith",
-    review: "Highly recommend! They are skilled, friendly, and dedicated to their work.",
+    review:
+      "Highly recommend! They are skilled, friendly, and dedicated to their work.",
     rating: 4,
   },
   {
     name: "Sophia Lee",
-    review: "The service was outstanding. I will definitely work with them again!",
+    review:
+      "Great breakfast cereals, healthy and delicious",
     rating: 5,
   },
   {
     name: "Charlotte Seyab",
-    review: "The service was outstanding. I will definitely buy with them again!",
+    review:
+      "The service was outstanding. I will definitely buy with them again!",
     rating: 5,
   },
 ];
@@ -33,21 +37,45 @@ export const Review = () => {
   };
 
   const prevReview = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length
+    );
   };
 
   return (
-    <section className="py-12 bg-gray-100 text-center">
-      <div id="review" className="container mx-auto px-6 max-w-2xl">
-        <h2 className="text-3xl font-bold text-gray-800 font-serif">What Our Clients Say</h2>
-        <div className="relative bg-white shadow-lg rounded-xl p-6 mt-6">
-          <p className="text-gray-700 text-lg">"{reviews[currentIndex].review}"</p>
-          <h3 className="mt-4 font-semibold text-gray-900">- {reviews[currentIndex].name}</h3>
+    <section
+      className="py-12 text-center"
+      style={{
+        backgroundImage: `url(${backgroundImage})`, // Set the background image
+        backgroundSize: "cover", // Cover the entire section
+        backgroundPosition: "center", // Center the image
+        backgroundAttachment: "fixed", // Fixed background
+      }}
+    >
+      <div
+        id="review"
+        className="container mx-auto px-6 max-w-2xl bg-white bg-opacity-80 rounded-lg shadow-lg p-6"
+      >
+        <h2 className="text-3xl font-bold text-gray-800 font-serif">
+          What Our Clients Say
+        </h2>
+        <div className="relative mt-6">
+          <p className="text-gray-700 text-lg">
+            "{reviews[currentIndex].review}"
+          </p>
+          <h3 className="mt-4 font-semibold text-gray-900">
+            - {reviews[currentIndex].name}
+          </h3>
           <div className="mt-2 flex justify-center">
             {Array.from({ length: 5 }).map((_, i) => (
-              <span key={i} className={
-                `text-yellow-400 text-xl ${i < reviews[currentIndex].rating ? "" : "opacity-30"}`
-              }>★</span>
+              <span
+                key={i}
+                className={`text-yellow-400 text-xl ${
+                  i < reviews[currentIndex].rating ? "" : "opacity-30"
+                }`}
+              >
+                <FaStar />
+              </span>
             ))}
           </div>
         </div>
@@ -68,6 +96,6 @@ export const Review = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Review
+export default Review;

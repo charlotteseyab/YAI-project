@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     // Initialize smooth scroll
     const scroll = new SmoothScroll('a[href*="#"]', {
-      speed: 200,
+      speed: 500,
       speedAsDuration: true,
     });
   }, []);

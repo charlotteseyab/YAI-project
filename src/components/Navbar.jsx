@@ -94,7 +94,7 @@ const Navbar = () => {
 
           {/* Call-to-Action Button (Visible on Large Screens) */}
           <a
-            href="/order"
+            href="https://paystack.shop/brown-and-brown-food"
             className="hidden md:block bg-yellow-400 text-red-600 px-6 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300"
           >
             Order Now

@@ -18,15 +18,15 @@ export const Hero = () => {
         {/* Left Column (Text) */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
-            <span className="block text-yellow-400">Welcome</span>
-            <span className="block text-red-600">to</span>
+            <span className="block text-yellow-400">Welcome to</span>
+            {/* <span className="block text-red-600">to</span> */}
             <span className="block text-white">Brown & Brown Foods</span>
           </h1>
           <p className="text-lg mb-6">
             Healthy, delicious, and convenient breakfast cereals
           </p>
           <a
-            href="/order"
+            href="https://paystack.shop/brown-and-brown-food"
             className="bg-yellow-400 text-red-600 px-6 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300"
           >
             ORDER NOW

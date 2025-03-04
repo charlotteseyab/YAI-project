@@ -85,22 +85,26 @@ export const Showcase = () => {
     {
       id: 1,
       name: "TomBrown",
-      image: img2, // Replace with actual image URL
+      price: 10.0, // Price in GHS
+      image: img2,
     },
     {
       id: 2,
       name: "Wheat Cereal",
-      image: img1, // Replace with actual image URL
+      price: 20.0,
+      image: img1,
     },
     {
       id: 3,
       name: "Eko-egbeemi",
-      image: img3, // Replace with actual image URL
+      price: 15.0,
+      image: img3,
     },
     {
       id: 4,
       name: "Oblayo",
-      image: img4, // Replace with actual image URL
+      price: 25.0,
+      image: img4,
     },
   ];
 
@@ -119,17 +123,24 @@ export const Showcase = () => {
                   alt={product.name}
                   className="w-full h-96 object-cover"
                 />
-                {/* Overlay for Product Name and Buy Button */}
-                <div className="absolute inset-0 flex flex-col justify-end items-center bg-black bg-opacity-50 p-4">
-                  <h3 className="text-xl font-bold text-yellow-400 mb-2 font-serif">
-                    {product.name}
-                  </h3>
-                  <Link
-                    to="/order#top"
-                    className="bg-yellow-300 text-red-600 px-4 py-2 rounded font-semibold hover:bg-yellow-500 transition duration-300"
-                  >
-                    Buy
-                  </Link>
+                {/* Overlay for Product Name, Price, and Buy Button */}
+                <div className="absolute inset-0 flex flex-col justify-between p-4 bg-black bg-opacity-50">
+                  <div>
+                    <h3 className="text-xl font-bold text-yellow-400 mb-2 font-serif">
+                      {product.name}
+                    </h3>
+                    <p className="text-white mb-2">
+                      Price: GHS {product.price.toFixed(2)}
+                    </p>
+                  </div>
+                  <div className="flex justify-end">
+                    <Link
+                      to="https://paystack.shop/brown-and-brown-food"
+                      className="bg-yellow-300 text-red-600 px-4 py-2 rounded font-semibold hover:bg-yellow-500 transition duration-300"
+                    >
+                      Buy
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
