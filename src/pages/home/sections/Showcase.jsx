@@ -19,7 +19,6 @@ const NextArrow = (props) => {
         color: "black",
         right: "10px",
         zIndex: 1,
-        // background: "white",
         borderRadius: "50%",
         padding: "1px",
       }}
@@ -40,7 +39,6 @@ const PrevArrow = (props) => {
         color: "black",
         left: "10px",
         zIndex: 1,
-        // background: "black",
         borderRadius: "50%",
         padding: "10px",
       }}
@@ -63,12 +61,15 @@ export const Showcase = () => {
     cssEase: "linear",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    centerMode: true,
+    centerPadding: "60px",
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          centerPadding: "40px",
         },
       },
       {
@@ -76,6 +77,7 @@ export const Showcase = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerPadding: "20px",
         },
       },
     ],
@@ -129,7 +131,7 @@ export const Showcase = () => {
                     <h3 className="text-xl font-bold text-yellow-400 mb-2 font-serif">
                       {product.name}
                     </h3>
-                    <p className="text-white mb-2">
+                    <p className="text-white mb-2 font-serif bold">
                       Price: GHS {product.price.toFixed(2)}
                     </p>
                   </div>

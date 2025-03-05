@@ -16,3 +16,18 @@
   color: #4a5568;
   /* Dark gray for text */
 }
+
+#drink-showcase {
+  background-color: #fff;
+  /* White background */
+}
+
+#drink-showcase h2 {
+  color: #c53030;
+  /* Dark red for headings */
+}
+
+#drink-showcase p {
+  color: #4a5568;
+  /* Dark gray for text */
+}

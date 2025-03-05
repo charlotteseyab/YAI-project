@@ -7,7 +7,7 @@ import Innovator from "./sections/Innovator";
 import Review from "./sections/Review";
 import Contact from "./sections/Contact";
 import Blog from "./sections/Blog";
-// import HowItWorks from "./sections/HowItWorks";
+import DrinkShowcase from "./sections/DrinkShowcase";
 
 // Main homepage component
 const Home = () => {
@@ -24,6 +24,7 @@ const Home = () => {
       <Hero />
       <Product />
       <Showcase />
+      <DrinkShowcase />
       <Innovator />
       <Blog />
       <Review />

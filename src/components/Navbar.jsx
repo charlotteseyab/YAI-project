@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div>
       <nav
-  className="fixed top-0 left-1/2 transform -translate-x-1/2 w-[70%] bg-gradient-to-r from-red-600 to-yellow-400 text-black shadow-lg rounded-b-lg z-10"
+  className="fixed top-0 left-1/2 transform -translate-x-1/2 w-[80%] bg-gradient-to-r from-red-600 to-yellow-400 text-black shadow-lg rounded-b-lg z-10"
   style={{ marginTop: "35px" }}
 >
 
@@ -44,7 +44,7 @@ const Navbar = () => {
               href="#products"
               className="block py-2 md:inline hover:text-yellow-400"
             >
-              Products
+              About
             </a>
             {/* <a
               href="#products"
@@ -56,7 +56,13 @@ const Navbar = () => {
               href="#showcase"
               className="block py-2 md:inline hover:text-yellow-400"
             >
-              Showcase
+              Cereals
+            </a>
+            <a
+              href="#drink"
+              className="block py-2 md:inline hover:text-yellow-400"
+            >
+              Drinks
             </a>
             <a
               href="#innovator"
