@@ -8,7 +8,7 @@ const Footer = () => {
         <a href="https://wa.me/message/WSH5UO6CYOMKC1" target="_blank" rel="noopener noreferrer">
           <FaWhatsapp className="cursor-pointer hover:text-yellow-400 text-lg" />
         </a>
-        <a href="https://www.instagram.com/invites/contact/?igsh=18lwh4b4s3kl1&utm_content=tb5qgtk" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/brown_brown_foods?igsh=bmZodWNid2syOHBz" target="_blank" rel="noopener noreferrer">
           <FaInstagram className="cursor-pointer hover:text-yellow-400 text-lg" />
         </a>
         <a href="https://www.tiktok.com/@brownbrown.food?_t=ZS-8uAFrhO3zke&_r=1" target="_blank" rel="noopener noreferrer">

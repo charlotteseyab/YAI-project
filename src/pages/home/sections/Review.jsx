@@ -17,8 +17,7 @@ const reviews = [
   },
   {
     name: "Sophia Lee",
-    review:
-      "Great breakfast cereals, healthy and delicious",
+    review: "Great breakfast cereals, healthy and delicious",
     rating: 5,
   },
   {
@@ -54,13 +53,13 @@ export const Review = () => {
     >
       <div
         id="review"
-        className="container mx-auto px-6 max-w-2xl bg-white bg-opacity-80 rounded-lg shadow-lg p-6"
+        className="container mx-auto px-6 max-w-2xl bg-white bg-opacity-90 rounded-lg shadow-lg p-6"
       >
-        <h2 className="text-3xl font-bold text-gray-800 font-serif">
+        <h2 className="text-3xl font-bold text-gray-800 font-serif mb-4">
           What Our Clients Say
         </h2>
         <div className="relative mt-6">
-          <p className="text-gray-700 text-lg">
+          <p className="text-gray-700 text-lg italic">
             "{reviews[currentIndex].review}"
           </p>
           <h3 className="mt-4 font-semibold text-gray-900">
@@ -82,13 +81,13 @@ export const Review = () => {
         <div className="flex justify-between mt-6">
           <button
             onClick={prevReview}
-            className="px-4 py-2 bg-gray-300 text-gray-800 rounded-lg hover:bg-gray-400"
+            className="px-4 py-2 text-white rounded-lg  transition duration-300"
           >
             ◀
           </button>
           <button
             onClick={nextReview}
-            className="px-4 py-2 bg-gray-300 text-gray-800 rounded-lg hover:bg-gray-400"
+            className="px-4 py-2 text-white rounded-lg  transition duration-300"
           >
             ▶
           </button>

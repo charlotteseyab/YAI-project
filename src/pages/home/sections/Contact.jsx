@@ -7,7 +7,7 @@ export const Contact = () => {
   
         {/* Left Section - Contact Form */}
         <div className="w-full lg:w-2/3 p-6">
-          <h2 className="text-4xl font-bold text-black font-serif">Contact <span className="text-red-500 font-serif">Us</span></h2>
+          <h2 className="text-4xl font-bold text-black font-serif">Contact <span className="text-red-600 font-serif">Us</span></h2>
           <p className="text-gray-600 mt-2">Feel free to contact us any time. We will get back to you as soon as we can!</p>
   
           <form className="mt-6">

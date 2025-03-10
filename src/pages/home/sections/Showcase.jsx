@@ -137,7 +137,7 @@ export const Showcase = () => {
                   </div>
                   <div className="flex justify-end">
                     <Link
-                      to="https://paystack.shop/brown-and-brown-food"
+                      to="https://paystack.shop/brown-and-brown-food" target="_blank"
                       className="bg-yellow-300 text-red-600 px-4 py-2 rounded font-semibold hover:bg-yellow-500 transition duration-300"
                     >
                       Buy

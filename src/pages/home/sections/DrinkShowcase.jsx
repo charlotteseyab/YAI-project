@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,6 +8,11 @@ import drinkImage2 from "../../../assets/images/drink1.jpg";
 import drinkImage3 from "../../../assets/images/drink3.jpg";
 
 const DrinkShowcase = () => {
+  const [showHealthBenefits, setShowHealthBenefits] = useState(false);
+  const [showCulturalSignificance, setShowCulturalSignificance] =
+    useState(false);
+
+  // Vertical Carousel Settings
   const settings = {
     dots: true,
     infinite: true,
@@ -16,7 +21,18 @@ const DrinkShowcase = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
-    cssEase: "linear",
+    vertical: true, // Enable vertical scrolling
+    verticalSwiping: true, // Allow vertical swiping
+    arrows: false, // Hide arrows for a cleaner look
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          vertical: false, // Switch to horizontal on smaller screens
+          verticalSwiping: false,
+        },
+      },
+    ],
   };
 
   const drink = {
@@ -40,26 +56,23 @@ const DrinkShowcase = () => {
 
   return (
     <section id="drink" className="bg-white bg-opacity-50 py-16">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <h2
-          className="text-4xl font-bold text-center text-red-600 mb-8 font-serif"
-          data-aos="fade-up"
-        >
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-red-600 mb-8 font-serif">
           Our Signature Drinks
         </h2>
 
         {/* Main Content */}
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          {/* Image Slider */}
-          <div className="md:w-1/3" data-aos="fade-right">
+        <div className="flex flex-col lg:flex-row items-center gap-8">
+          {/* Vertical Image Carousel */}
+          <div className="w-full lg:w-1/2">
             <Slider {...settings}>
               {[drinkImage1, drinkImage2, drinkImage3].map((image, index) => (
-                <div key={index} className="flex justify-center">
+                <div key={index} className="px-2">
                   <img
                     src={image}
                     alt={`Drink ${index + 1}`}
-                    className="w-96 h-96 max-w-xs md:max-w-md lg:max-w-lg object-cover rounded-xl shadow-lg"
+                    className="w-full h-64 sm:h-80 md:h-96 lg:h-112 object-cover rounded-xl shadow-lg mx-auto"
                   />
                 </div>
               ))}
@@ -67,14 +80,11 @@ const DrinkShowcase = () => {
           </div>
 
           {/* Drink Information */}
-          <div
-            className="md:w-1/2 bg-white p-8 shadow-lg rounded-xl"
-            data-aos="fade-left"
-          >
-            <h2 className="text-3xl font-serif text-red-600 mb-4">
+          <div className="w-full lg:w-1/2 bg-white p-6 sm:p-8 shadow-lg rounded-xl">
+            <h2 className="text-2xl sm:text-3xl font-serif text-red-600 mb-4">
               {drink.name}
             </h2>
-            <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
               A chilled bottle of our delicious and healthy Sobolo is just what
               you need! Made with dried hibiscus petals, ginger, and a fruity
               twist for an unforgettable taste.
@@ -85,54 +95,64 @@ const DrinkShowcase = () => {
             </p>
             <Link
               to="https://paystack.shop/brown-and-brown-food"
+              target="_blank"
               className="inline-block bg-yellow-400 text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300 shadow-md"
             >
               Buy Now
             </Link>
-          </div>
-        </div>
 
-        {/* Additional Information */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          {/* Description */}
-          <div
-            className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
-            data-aos="fade-up"
-          >
-            <h3 className="text-xl font-bold text-red-600 mb-3 font-serif">
-              Description
-            </h3>
-            <p className="text-gray-700 leading-relaxed">{drink.description}</p>
-          </div>
+            {/* Expandable Buttons for Additional Information */}
+            <div className="mt-6 flex flex-col sm:flex-row gap-4">
+              {/* Health Benefits Button */}
+              <button
+                onClick={() => setShowHealthBenefits(!showHealthBenefits)}
+                className="flex-1 bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300 text-sm sm:text-base"
+              >
+                {showHealthBenefits
+                  ? "Hide Health Benefits"
+                  : "Health Benefits"}
+              </button>
 
-          {/* Health Benefits */}
-          <div
-            className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 font-serif"
-            data-aos="fade-up"
-          >
-            <h3 className="text-xl font-bold text-red-600 mb-3">
-              Health Benefits
-            </h3>
-            <ul className="list-disc list-inside text-gray-700 space-y-2">
-              {healthBenefits.map((benefit, index) => (
-                <li key={index}>{benefit}</li>
-              ))}
-            </ul>
-          </div>
+              {/* Cultural Significance Button */}
+              <button
+                onClick={() =>
+                  setShowCulturalSignificance(!showCulturalSignificance)
+                }
+                className="flex-1 bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition duration-300 text-sm sm:text-base"
+              >
+                {showCulturalSignificance
+                  ? "Hide Cultural Significance"
+                  : "Cultural Significance"}
+              </button>
+            </div>
 
-          {/* Cultural Significance */}
-          <div
-            className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 font-serif"
-            data-aos="fade-up"
-          >
-            <h3 className="text-xl font-bold text-red-600 mb-3">
-              Cultural Significance
-            </h3>
-            <ul className="list-disc list-inside text-gray-700 space-y-2">
-              {culturalSignificance.map((significance, index) => (
-                <li key={index}>{significance}</li>
-              ))}
-            </ul>
+            {/* Health Benefits Content */}
+            {showHealthBenefits && (
+              <div className="mt-4 bg-white p-4 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold text-red-600 mb-3">
+                  Health Benefits
+                </h3>
+                <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  {healthBenefits.map((benefit, index) => (
+                    <li key={index}>{benefit}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Cultural Significance Content */}
+            {showCulturalSignificance && (
+              <div className="mt-4 bg-white p-4 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold text-red-600 mb-3">
+                  Cultural Significance
+                </h3>
+                <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  {culturalSignificance.map((significance, index) => (
+                    <li key={index}>{significance}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </div>

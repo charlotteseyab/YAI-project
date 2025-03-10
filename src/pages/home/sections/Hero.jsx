@@ -1,5 +1,4 @@
 import React from "react";
-import breakfastIllustration from "../../../assets/images/eko.webp";
 import bgImage from "../../../assets/images/eko.webp"; // Add your background image
 
 export const Hero = () => {
@@ -14,9 +13,9 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md backdrop-filter"></div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-white">
+      <div className="relative container mx-auto px-6 flex flex-col md:flex-row items-center justify-center text-white text-center md:text-left">
         {/* Left Column (Text) */}
-        <div className="md:w-1/2 text-center md:text-left">
+        <div className="md:w-1/2">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
             <span className="block text-yellow-400">Welcome to</span>
             {/* <span className="block text-red-600">to</span> */}
@@ -27,6 +26,7 @@ export const Hero = () => {
           </p>
           <a
             href="https://paystack.shop/brown-and-brown-food"
+            target="_blank"
             className="bg-yellow-400 text-red-600 px-6 py-2 rounded-full font-semibold hover:bg-yellow-500 transition duration-300"
           >
             ORDER NOW
