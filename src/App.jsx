@@ -6,8 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 import Home from "./pages/home";
 import OrderPage from "./pages/OrderPage";
-import { init } from '@emailjs/browser';
-// init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+
+
 
 const App = () => {
   const router = createBrowserRouter([
