@@ -17,7 +17,7 @@ export const Innovator = () => {
             <img
               src={Inno}
               alt="Innovator"
-              className="w-full max-w-[450px] rounded-2xl shadow-xl transform group-hover:scale-102 transition-all duration-500 object-cover border-2 border-red-400/20"
+              className="w-full max-w-[350px] rounded-2xl shadow-xl transform group-hover:scale-102 transition-all duration-500 object-cover border-2 border-red-400/20"
             />
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-red-500/10 to-yellow-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>

@@ -49,7 +49,7 @@ export const Product = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
+              className="bg-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
             >
               <div className="p-6 space-y-4">
                 <h3 className="text-lg font-semibold text-gray-900">

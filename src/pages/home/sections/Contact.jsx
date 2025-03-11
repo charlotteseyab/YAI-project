@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 
-
 export const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,30 +18,13 @@ export const Contact = () => {
     });
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   emailjs
-  //     .send("service_phveol3", "YOUR_TEMPLATE_ID", formData, "YOUR_USER_ID")
-  //     .then(
-  //       (response) => {
-  //         console.log("SUCCESS!", response.status, response.text);
-  //         // Optionally reset the form
-  //         setFormData({ name: "", email: "", message: "" });
-  //       },
-  //       (err) => {
-  //         console.error("FAILED...", err);
-  //       }
-  //     );
-  // };
-
   return (
     <div
       id="contact"
-      className="flex flex-col lg:flex-row bg-white min-h-screen p-10 lg:p-20"
+      className="flex flex-col lg:flex-row bg-white min-h-screen p-10 lg:p-10"
     >
       {/* Left Section - Contact Form */}
-      <div className="w-full lg:w-2/3 p-6 bg-gray-100 rounded-2xl m-10">
+      <div className="w-full lg:w-2/3 p-6 bg-gray-100 rounded-1xl m-10">
         <h2 className="text-4xl font-bold text-black font-serif">
           Contact <span className="text-red-600 font-serif">Us</span>
         </h2>
@@ -49,7 +33,11 @@ export const Contact = () => {
           we can!
         </p>
 
-        <form action="https://formspree.io/f/xvgkoawb" method="POST" className="mt-6">
+        <form
+          action="https://formspree.io/f/xvgkoawb"
+          method="POST"
+          className="mt-6"
+        >
           <label className="block text-gray-700 text-sm">Name</label>
           <input
             type="text"
@@ -79,8 +67,11 @@ export const Contact = () => {
             required
           ></textarea>
 
-          <button className="w-full bg-black text-white font-bold py-2 mt-4 rounded hover:bg-gray-800">
-            SEND
+          <button
+            className="w-full bg-black text-white font-bold py-2 mt-4 rounded hover:bg-gray-800"
+            disabled={isLoading}
+          >
+            {isLoading ? "SENDING..." : "SEND"}
           </button>
         </form>
       </div>

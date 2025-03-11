@@ -16,7 +16,12 @@ const Blog = () => {
         "Better Heart Health",
         "Provides Essential Nutrients",
         "Improves Concentration & Memory",
+        "Improves Concentration and Focus",
+        "Encourages Healthy Eating Habits",
+        "Sets a Positive Tone for the Day",
+        "Encourages Healthy Eating Habits",
         "Supports Metabolism & Weight Management",
+        
       ],
       image: image1,
     },
@@ -27,6 +32,9 @@ const Blog = () => {
         "Rich in Protein – Supports muscle growth and repair.",
         "High in Fiber – Aids digestion and prevents constipation.",
         "Supports Gut Health – Improves digestion with probiotics.",
+        "Contains Healthy Fats – Groundnuts are a source of monounsaturated fats, which are good for heart health.",
+        "Packed with Vitamins and Minerals – Provides iron, magnesium, and B vitamins for overall health.",
+        "Rich in Complex Carbohydrates – Provides sustained energy throughout the day."
       ],
       image: image2,
     },
@@ -37,6 +45,10 @@ const Blog = () => {
         "Prioritize Protein – Keeps you full longer.",
         "Avoid Sugar – Opt for whole grains and fruits.",
         "Stay Hydrated – Drink water to prevent dehydration.",
+        " Include Whole Grains – Whole grains provide sustained energy and are rich in fiber.",
+        "Balance Your Meal –  A balanced breakfast includes protein, healthy fats, and carbs for sustained energy.",
+        " Add Healthy Fats – Healthy fats support brain function and keep you satisfied.",
+        "Incorporate Fruits and Vegetables – Fruits and veggies are packed with vitamins, minerals, and antioxidants."
       ],
       image: image3,
     },

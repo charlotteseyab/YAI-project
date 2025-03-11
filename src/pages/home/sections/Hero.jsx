@@ -40,7 +40,7 @@ export const Hero = () => {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-gray-300 max-w-xl leading-relaxed">
-            Experience the perfect blend of health and taste with our premium breakfast cereals. 
+            Experience the perfect blend of health and taste with our premium breakfast cereals and amazing drinks. 
             {/* Start your day right with our nutritious and delicious offerings. */}
           </p>
 

@@ -42,9 +42,9 @@ const DrinkShowcase = () => {
   ];
 
   return (
-    <section id="drink" className="bg-gray-100 py-24 overflow-hidden">
+    <section id="drink" className="bg-gray-100 py-10 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-16 font-serif">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900  font-serif">
           Our Signature Drinks
         </h2>
 
