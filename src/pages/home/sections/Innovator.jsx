@@ -11,15 +11,38 @@ export const Innovator = () => {
       className="bg-gradient-to-b from-white to-red-50/30 py-24 px-4 md:px-10"
     >
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-16 max-w-7xl">
-        {/* Image Section */}
+        {/* Enhanced Image Section */}
         <div className="md:w-1/2 flex justify-center">
-          <div className="relative group">
-            <img
-              src={Inno}
-              alt="Innovator"
-              className="w-full max-w-[350px] rounded-2xl shadow-xl transform group-hover:scale-102 transition-all duration-500 object-cover border-2 border-red-400/20"
-            />
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-red-500/10 to-yellow-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div className="relative">
+            {/* Decorative Background Elements */}
+            <div className="absolute -top-4 -left-4 w-full h-full">
+              <div className="absolute w-full h-full bg-red-100 rounded-2xl transform rotate-6 transition-transform duration-500"></div>
+            </div>
+            <div className="absolute -bottom-4 -right-4 w-full h-full">
+              <div className="absolute w-full h-full bg-yellow-100 rounded-2xl transform -rotate-6 transition-transform duration-500"></div>
+            </div>
+            
+            {/* Main Image Container */}
+            <div className="relative group">
+              {/* Image Frame */}
+              <div className="absolute inset-0 bg-gradient-to-r from-red-400/20 to-yellow-600/20 rounded-2xl transform rotate-1 transition-transform duration-500"></div>
+              
+              {/* Main Image */}
+              <div className="relative bg-white p-2 rounded-2xl shadow-xl transform transition-all duration-500 group-hover:scale-[1.02]">
+                <img
+                  src={Inno}
+                  alt="Innovator"
+                  className="w-full max-w-[350px] rounded-xl object-cover"
+                />
+                
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-red-500/10 to-yellow-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+
+              {/* Decorative Corner Elements */}
+              <div className="absolute -top-2 -left-2 w-6 h-6 bg-red-400 rounded-full blur-[2px] opacity-50"></div>
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-yellow-600 rounded-full blur-[2px] opacity-50"></div>
+            </div>
           </div>
         </div>
 
