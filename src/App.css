@@ -44,3 +44,21 @@
 .animate-spin-slow {
   animation: spin-slow 30s linear infinite;
 }
+
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(250px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(250px) rotate(-360deg);
+  }
+}
+
+.orbital-element {
+  animation: orbit 20s linear infinite;
+}
+
+.orbital-element:hover {
+  animation-play-state: paused;
+}

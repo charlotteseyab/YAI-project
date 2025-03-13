@@ -32,7 +32,7 @@ export const Product = () => {
   ];
 
   return (
-    <div id="products" className="py-24">
+    <div id="products" className="py-10">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">
